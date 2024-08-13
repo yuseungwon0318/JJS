@@ -14,7 +14,7 @@ public class Fire : MonoBehaviour
     {
         while (true) 
         { 
-            Instantiate(bullet, Camera.main.ScreenToWorldPoint(Input.mousePosition), firePos.transform.rotation);
+            Instantiate(bullet, firePos.transform.position, firePos.transform.rotation);
             yield return new WaitForSeconds(atkSpd);
         }
     }
